@@ -2,10 +2,11 @@ import {Layout, Menu, Row} from 'antd';
 import React from 'react';
 import {useNavigate} from "react-router-dom";
 import {RouteNames} from "../router";
+import {useTypedSelector} from "../hooks/useTypedSelector";
 
 const Navbar = () => {
     const router = useNavigate()
-    const isAuth = false
+    const {isAuth} = useTypedSelector(state => state.auth)
     return (
         <Layout.Header>
             <Row justify="end">
