@@ -3,10 +3,13 @@ import React from 'react';
 import {useNavigate} from "react-router-dom";
 import {RouteNames} from "../router";
 import {useTypedSelector} from "../hooks/useTypedSelector";
+import {useActions} from "../hooks/useActions";
 
 const Navbar = () => {
     const router = useNavigate()
     const {isAuth} = useTypedSelector(state => state.auth)
+    const {logout} = useActions()
+
     return (
         <Layout.Header>
             <Row justify="end">
@@ -17,7 +20,7 @@ const Navbar = () => {
                         </div>
                         <Menu.Item
                             onClick={() =>
-                                console.log("Logout")
+                                logout()
                             }
                             key={1}>
                             Logout

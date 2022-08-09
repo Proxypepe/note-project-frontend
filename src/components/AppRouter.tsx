@@ -21,7 +21,7 @@ const AppRouter = () => {
                 )}
                 <Route
                     path="*"
-                    element={<Navigate to={RouteNames.PUBLIC_REDIRECT} replace/>}
+                    element={<Navigate to={RouteNames.PRIVATE_REDIRECT} replace/>}
                 />
             </Routes>
             :

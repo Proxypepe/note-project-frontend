@@ -3,6 +3,7 @@ import {Button, Form, Input} from "antd";
 import {rules} from "../utils/rules";
 import {useActions} from "../hooks/useActions";
 import {useTypedSelector} from "../hooks/useTypedSelector";
+import './styles/LoginForm.css';
 
 const LoginForm: FC = () => {
     const {errorMessage} = useTypedSelector(state => state.auth);
@@ -19,6 +20,11 @@ const LoginForm: FC = () => {
         <Form
             onFinish={submitForm}
         >
+            <div className="name">
+                <h1>
+                    Sign in
+                </h1>
+            </div>
             {errorMessage && <div style={{color: 'red'}}>
                 {errorMessage}
             </div>}
