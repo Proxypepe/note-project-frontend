@@ -1,13 +1,13 @@
 import {Layout, Menu, Row} from 'antd';
-import React from 'react';
+import React, {FC} from 'react';
 import {useNavigate} from "react-router-dom";
 import {RouteNames} from "../router";
 import {useTypedSelector} from "../hooks/useTypedSelector";
 import {useActions} from "../hooks/useActions";
 
-const Navbar = () => {
+const Navbar: FC = () => {
     const router = useNavigate()
-    const {isAuth} = useTypedSelector(state => state.auth)
+    const {isAuth, user} = useTypedSelector(state => state.auth)
     const {logout} = useActions()
 
     return (
@@ -15,8 +15,8 @@ const Navbar = () => {
             <Row justify="end">
                 {isAuth ?
                     <Menu theme="dark" mode="horizontal" selectable={false}>
-                        <div style={{color: 'white'}}>
-                            User 1
+                        <div style={{color: 'white', paddingRight: 10}}>
+                            {user.username}
                         </div>
                         <Menu.Item
                             onClick={() =>

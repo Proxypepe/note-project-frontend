@@ -1,6 +1,6 @@
 import React from "react";
 import Login from "../pages/Login";
-import Note from "../pages/Note";
+import Note from "../pages/Notes";
 
 
 export interface IRoute {
@@ -12,7 +12,7 @@ export enum RouteNames {
     LOGIN = "/login",
     PUBLIC_REDIRECT = LOGIN,
 
-    NOTE = "/note",
+    NOTE = "/notes",
     PRIVATE_REDIRECT = NOTE,
 
 }

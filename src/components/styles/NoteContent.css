@@ -1,0 +1,37 @@
+
+.header__page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.note__content {
+    margin-top: 24px;
+    padding-top: 20px;
+    justify-content: center;
+    background-color: white;
+    display: flex;
+}
+
+.note__block {
+    width: 90%;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.content__header {
+    justify-content: space-between;
+    display: flex;
+}
+
+.text {
+    width: 100%;
+
+
+}
+
+.tag {
+    border: 1px solid black;
+    border-radius: 1px;
+}
